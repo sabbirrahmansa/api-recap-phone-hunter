@@ -10,13 +10,20 @@
 </head>
 <body>
     <header>
-        <h1 class="text-6xl">Hunting Phone Api</h1>
+        <h1 class="text-4xl text-center text-gray-500">Latest Top Mobile Phone Price & Release Update in Bangladesh</h1>
 
     </header>
 
-    <main>
+    <main class="container mx-auto">
+
+        <section class="bg-slate-400 p-4 m-4 rounded">
+            
+                <input type="text" placeholder="search..." id="input-Field" class="input input-bordered input-secondary w-full max-w-xs " />
+                <button ondblclick="hendelSearch()" id="searchButton" class="btn btn-secondary">search</button>
+           
+        </section>
         <section>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 
                
 
