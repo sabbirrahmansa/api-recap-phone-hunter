@@ -7,26 +7,39 @@
     <!-- daisyul link -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    
+</style>
 </head>
 <body>
     <header>
-        <h1 class="text-4xl text-center text-gray-500">Latest Top Mobile Phone Price & Release Update in Bangladesh</h1>
+        <h1 class="text-4xl text-center text-red-300">Latest Top Mobile Phone Price & Release Update in Bangladesh</h1>
 
     </header>
 
     <main class="container mx-auto">
 
-        <section class="bg-slate-400 p-4 m-4 rounded">
+        <section class="p-4 m-4 rounded">
             
                 <input type="text" placeholder="search..." id="input-Field" class="input input-bordered input-secondary w-full max-w-xs " />
-                <button ondblclick="hendelSearch()" id="searchButton" class="btn btn-secondary">search</button>
+                <button ondblclick="hendelSearch()"  class="btn btn-secondary">search</button>
            
         </section>
         <section>
+
+             <!-- addd spnner -->
+             <div id="spnner-show" class="my-10 text-center hidden">
+                <span class="loading loading-spinner text-secondary"></span>
+             </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 
                
 
+            </div>
+
+            <div id="Show-all-container" class="hidden">
+                <button class="btn btn-outline btn-success ">Show all</button>
             </div>
         </section>
 

@@ -18,13 +18,24 @@ const displayPhone = (phones) =>{
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent ='';
 
+    const showAllContainer = document.getElementById('Show-all-container')
+    if(phones.length > 12){
+        showAllContainer.classList.remove('hidden')
+    }
+    else{
+        showAllContainer.classList.add('hidden')
+    }
+
+    // fast show 12 phone.
+     phones = phones.slice(0,12)
+
    phones.forEach(phone =>{
 
     console.log(phone)
 
      // 2 step creat a div
      const phoneCard = document.createElement('div')
-     phoneCard.classList=`card  bg-gray-500 p-4 shadow-xl`;
+     phoneCard.classList=`card  bg-gray-50 p-4 shadow-xl`;
 
      // 3 step inner html
      phoneCard.innerHTML =`
@@ -49,11 +60,15 @@ const displayPhone = (phones) =>{
 
    })
 
+   toggleSpnnerShow(false)
+
 
 
 }
 // button a onclick deya function ta bosaiya deshi
 const hendelSearch = () =>{
+
+    toggleSpnnerShow(true)
     // 2 line korsi text field ar id neya value bosaisi , ar tar thaky velue neshi
     const searchField = document.getElementById('input-Field')
     const searchText = searchField.value ;
@@ -61,6 +76,19 @@ const hendelSearch = () =>{
     // loadphone function ta call koray deshi, and paramiter bosaisi
     loadphone(searchText)
     
+}
+
+
+const toggleSpnnerShow = (isLodding) =>{
+    const toggleSpnner = document.getElementById('spnner-show')
+    if(isLodding){
+        toggleSpnner.classList.remove('hidden')
+    }
+    // toggleSpnner.classList.remove('hidden')
+
+    else{
+        toggleSpnner.classList.add('hidden')
+    }
 }
 
 
